@@ -1,0 +1,23 @@
+{
+        "blt_version" : 2,
+        "name" : "fading ammobox contours",
+        "author" : "theokrueger",
+        "description" : "fades out ammobox contours with distance",
+        "version" : "1.0",
+        "hooks" : [
+        ],
+        "persist_scripts" : [
+                {
+                        "global" : "sodihnasouabnsf",
+                        "script_path" : "text.lua"
+                }
+        ]
+        "updates" : [
+                {
+                        "identifier" : "FAC",
+                        "host" : {
+                                "meta" : "tbd"
+                        }
+                }
+        ]
+}

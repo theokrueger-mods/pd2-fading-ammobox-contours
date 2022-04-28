@@ -5,13 +5,11 @@
         "description" : "fades out ammobox contours with distance",
         "version" : "1.0",
         "hooks" : [
+                 {
+			"hook_id": "lib/units/contourext",
+			"script_path": "text.lua"
+		}
         ],
-        "persist_scripts" : [
-                {
-                        "global" : "sodihnasouabnsf",
-                        "script_path" : "text.lua"
-                }
-        ]
         "updates" : [
                 {
                         "identifier" : "FAC",

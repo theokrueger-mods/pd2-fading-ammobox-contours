@@ -30,11 +30,6 @@ Hooks:Add(
                         FAC:savesettings()
                 end
 
-                -- call getmetatable()
-                MenuCallbackHandler.FAC_get_meta_cblk = function(self, item)
-                        log('button pressed!')
-                end
-
                 MenuHelper:LoadFromJsonFile(FAC.path .. 'menus/mainmenu.json', FAC, FAC.settings)
         end
 )

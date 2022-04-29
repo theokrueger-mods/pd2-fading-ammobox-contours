@@ -31,6 +31,7 @@ Hooks:PostHook(
                                         if distance > 2000 then
                                                 boxcontour:_upd_opacity(0)
                                         else
+                                                -- also a fallback for if distance somehow fails
                                                 boxcontour:_upd_opacity(100)
                                         end
                                 end

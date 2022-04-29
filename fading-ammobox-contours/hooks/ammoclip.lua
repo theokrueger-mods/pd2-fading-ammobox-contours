@@ -1,8 +1,6 @@
--- execute this script once
-if _G.FAC_Boxes then return end
-
--- list of the units of every active box
-_G.FAC_Boxes = {}
+if not _G.FAC then
+        dofile(ModPath .. 'scripts/setup.lua')
+end
 
 -- add all new boxes to the list
 Hooks:PostHook(
@@ -10,7 +8,7 @@ Hooks:PostHook(
         'init',
         'FAC_init',
         function(self, unit)
-                FAC_Boxes[unit:key()] = unit
+                FAC.boxes[unit:key()] = unit
         end
 )
 
@@ -20,6 +18,6 @@ Hooks:PreHook(
         'delete_unit',
         'FAC_delete_unit',
         function(self)
-                FAC_Boxes[self._unit:key()] = nil
+                FAC.boxes[self._unit:key()] = nil
         end
 )

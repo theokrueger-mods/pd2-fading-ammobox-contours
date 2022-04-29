@@ -1,0 +1,10 @@
+{
+        'menu_id' : 'FAC_menu_main',
+        'parent_menu_id' : 'blt_options',
+        'title' : 'FAC_menu_main_title',
+        'description' : 'FAC_menu_main_desc',
+        'callback' : 'FAC_save',
+        'items' : [
+
+        ]
+}

@@ -1,32 +1,35 @@
--- run this file only once
 if _G.boxes then
         return
 end
 
 _G.boxes = {}
-
+local mvec3_distance = mvector3.distance
 Hooks:PostHook(
         ContourExt,
         'update',
         'FAC_CE_update',
         function(self, unit, t, dt)
                 local player = managers.player:player_unit()
-                if not alive(player) then return end
-                local mvec3_distance = mvector3.distance
-                for k, v in ipairs(boxes) do
-                        if not v._active then
-                                boxes[k] = nil
-                        else
-                                local distance = mvec3_distance(player:position(), v:position())
-
-                                if distance > 2000 then
-                                        v:pickup()._unit:contour():_upd_opacity(0)
+                local playerpos = player and alive(player) and player:position()
+                if playerpos then
+                        for key, box in pairs(boxes) do
+                                if box == nil then return end
+                                if box and box._active then
+                                        local boxpos = box:position()
+                                        local boxcontour = box:pickup()._unit:contour()
+                                        if boxpos and boxcontour then
+                                                local distance = mvec3_distance(playerpos, boxpos)
+                                                if distance > 1000 then
+                                                        boxcontour:_upd_opacity(0)
+                                                else
+                                                        boxcontour:_upd_opacity(100)
+                                                end
+                                        end
                                 else
-                                        v:pickup()._unit:contour():_upd_opacity(100)
+                                        boxes[key] = nil
                                 end
                         end
                 end
-
         end
 )
 
@@ -35,7 +38,15 @@ Hooks:PostHook(
         'init',
         'FAC_AC_init',
         function(self, unit)
-                table.insert(boxes, unit)
+                boxes[unit:key()] = unit
         end
 )
 
+Hooks:PreHook(
+        AmmoClip,
+        'delete_unit',
+        'FAC_AC_delete_unit',
+        function(self)
+                boxes[self._unit:key()] = nil
+        end
+)

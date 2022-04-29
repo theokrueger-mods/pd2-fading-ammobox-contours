@@ -1,20 +1,24 @@
 {
-        "blt_version" : 2,
-        "name" : "fading ammobox contours",
-        "author" : "theokrueger",
-        "description" : "fades out ammobox contours with distance",
-        "version" : "1.0",
-        "hooks" : [
-                 {
-			"hook_id": "lib/units/contourext",
-			"script_path": "text.lua"
+        'blt_version' : 2,
+        'name' : 'fading ammobox contours',
+        'author' : 'theokrueger',
+        'description' : 'fades out ammobox contours with distance',
+        'version' : '1.0',
+        'hooks' : [
+                {
+                        'hook_id' : 'lib/setups/gamesetup',
+                        'script_path' : 'hooks/gamesetup.lua'
+                },
+                {
+			'hook_id' : 'lib/units/pickups/ammoclip',
+			'script_path' : 'hooks/ammoclip.lua'
 		}
         ],
-        "updates" : [
+        'updates' : [
                 {
-                        "identifier" : "FAC",
-                        "host" : {
-                                "meta" : "tbd"
+                        'identifier' : 'FAC',
+                        'host' : {
+                                'meta' : 'tbd'
                         }
                 }
         ]

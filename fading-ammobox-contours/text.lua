@@ -14,7 +14,7 @@ Hooks:PostHook(
                 if playerpos then
                         for key, box in pairs(boxes) do
                                 if box == nil then return end
-                                if box and box._active then
+                                if alive(box) and box._active then
                                         local boxpos = box:position()
                                         local boxcontour = box:pickup()._unit:contour()
                                         if boxpos and boxcontour then

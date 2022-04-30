@@ -1,7 +1,3 @@
-if not _G.FAC then
-        dofile(ModPath .. 'scripts/setup.lua')
-end
-
 local mvec3_distance = mvector3.distance
 local framecount = 0
 -- update our contours every 5 frames because its unnoticeable compared to 1
@@ -23,7 +19,7 @@ Hooks:PostHook(
 
                 if not playerpos then return end
 
-                for key, box in pairs(FAC_Boxes) do
+                for key, box in pairs(FAC.boxes) do
                         if box == nil then return end
 
                         -- please dont try to do things to invalid box units
@@ -41,7 +37,7 @@ Hooks:PostHook(
                                 end
                         else
                                 -- remove invalid boxes from the list
-                                boxes[key] = nil
+                                FAC.boxes[key] = nil
                         end
                 end
         end

@@ -6,7 +6,7 @@ Hooks:Add(
                 for _, filename in pairs(file.GetFiles(FAC.i18n)) do
                         local str = filename:match('^(.*).json$')
                         if str and Idstring(str) and Idstring(str):key() == SystemInfo:language():key() then
-                                loc:load_localization_file(OLIB.i18n .. filename)
+                                loc:load_localization_file(FAC.i18n .. filename)
                                 break
                         end
                 end

@@ -6,5 +6,11 @@
         'FAC_enabled_desc' : 'When enabled, ammobox contours will fade out with distance based on below parameters.\nRequires heist restart.',
 
         'FAC_updaterate_title' : 'Update Rate',
-        'FAC_updaterate_desc' : 'How many times per second you want contours to be updated.\nRequires heist restart.'
+        'FAC_updaterate_desc' : 'How many times per second you want contours to be updated.\nRequires heist restart.',
+
+        'FAC_fadeout_start_title' : 'Fadeout Start Point',
+        'FAC_fadeout_start_desc' : 'Fadeout start point in meters.\nRequires heist restart.',
+
+        'FAC_fadeout_end_title' : 'Fadeout End Point',
+        'FAC_fadeout_end_desc' : 'Fadeout end point in meters.\nRequires heist restart.'
 }

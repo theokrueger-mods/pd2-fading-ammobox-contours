@@ -26,5 +26,33 @@
                         'min' : 1,
                         'step' : 1
                 },
+                {
+                        'type' : 'divider',
+                        'size' : 20
+                },
+                {
+                        'type' : 'slider',
+                        'id' : 'FAC_fadeout_start',
+                        'title' : 'FAC_fadeout_start_title',
+                        'description' : 'FAC_fadeout_start_desc',
+                        'callback' : 'FAC_update',
+                        'value' : 'fadeout_start',
+                        'default_value' : 15.00,
+                        'max' : 100.00,
+                        'min' : 0,
+                        'step' : 0.05
+                },
+                {
+                        'type' : 'slider',
+                        'id' : 'FAC_fadeout_end',
+                        'title' : 'FAC_fadeout_end_title',
+                        'description' : 'FAC_fadeout_end_desc',
+                        'callback' : 'FAC_update',
+                        'value' : 'fadeout_end',
+                        'default_value' : 2.00,
+                        'max' : 100.00,
+                        'min' : 0,
+                        'step' : 0.05
+                }
         ]
 }

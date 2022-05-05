@@ -1,7 +1,14 @@
 -- default settings
 FAC.settings = {
+        -- settings which are rounded to integer
+        int = {
+                ['updaterate'] = true
+        },
+        -- user changeable
         ['enabled'] = true,
-        ['updaterate'] = 4
+        ['updaterate'] = 4,
+        ['fadeout_start'] = 15.00,
+        ['fadeout_end'] = 20.00
 }
 
 -- save and load function

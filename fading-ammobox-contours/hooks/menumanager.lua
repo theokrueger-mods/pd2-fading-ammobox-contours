@@ -31,7 +31,12 @@ Hooks:Add(
                         if item._type == 'toggle' then
                                 FAC.settings[name] = item:value() == 'on'
                         elseif item._type == 'slider' then
-                                FAC.settings[name] = math.floor(tonumber(item:value()) + 0.5)
+                                local num = tonumber(item:value())
+                                -- round settings to integer is needed for the value
+                                if FAC.settings.int[name] then
+                                        num = math.floor(num + 0.5)
+                                end
+                                FAC.settings[name] = num
                         end
                         FAC:save_settings()
                 end

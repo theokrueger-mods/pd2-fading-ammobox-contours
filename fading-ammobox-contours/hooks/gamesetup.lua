@@ -16,6 +16,7 @@ Hooks:PostHook(
         'FAC_update',
         function(self, t, dt)
                 -- only update the contours every 5 frames
+                log(framecount)
                 if framecount < 5 then
                         framecount = framecount + 1
                         return
@@ -28,7 +29,7 @@ Hooks:PostHook(
 
                 if not playerpos then return end
 
-                for key, box in pairs(FAC.boxes) do
+                for key, box in pairs(FAC:getboxes()) do
                         if box == nil then return end
 
                         -- please dont try to do things to invalid box units
@@ -46,7 +47,7 @@ Hooks:PostHook(
                                 end
                         else
                                 -- remove invalid boxes from the list
-                                FAC.boxes[key] = nil
+                                FAC:removebox(key)
                         end
                 end
         end

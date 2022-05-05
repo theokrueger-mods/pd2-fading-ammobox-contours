@@ -9,3 +9,6 @@ _G.FAC = {
 -- load settings
 dofile(FAC.path .. 'scripts/settings.lua')
 FAC:load_settings()
+
+-- load utils
+dofile(FAC.path .. 'scripts/boxes.lua')

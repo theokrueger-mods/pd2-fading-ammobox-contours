@@ -13,7 +13,7 @@ Hooks:PostHook(
         'init',
         'FAC_init',
         function(self, unit)
-                FAC.boxes[unit:key()] = unit
+                FAC:addbox(unit)
         end
 )
 
@@ -23,6 +23,6 @@ Hooks:PreHook(
         'delete_unit',
         'FAC_delete_unit',
         function(self)
-                FAC.boxes[self._unit:key()] = nil
+                FAC:removebox(self._unit:key())
         end
 )

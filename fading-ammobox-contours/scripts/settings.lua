@@ -1,6 +1,7 @@
 -- default settings
 FAC.settings = {
-        ['enabled'] = true
+        ['enabled'] = true,
+        ['updaterate'] = 4
 }
 
 -- save and load function

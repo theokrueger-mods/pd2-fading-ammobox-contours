@@ -8,20 +8,20 @@ if not FAC.settings.enabled then
 end
 
 local mvec3_distance = mvector3.distance
-local framecount = 0
+local update_dt = 1 / (FAC.settings.updaterate or 4)
+local next_update = update_dt or 5
+
 -- update our contours every 5 frames because its unnoticeable compared to 1
 Hooks:PostHook(
         GameSetup,
         'update',
         'FAC_update',
         function(self, t, dt)
-                -- only update the contours every 5 frames
-                log(framecount)
-                if framecount < 5 then
-                        framecount = framecount + 1
-                        return
+                -- only update the contours at designated dt
+                if t > next_update then
+                        next_update = t + update_dt
                 else
-                        framecount = 0
+                        return
                 end
 
                 local player = managers.player:player_unit()

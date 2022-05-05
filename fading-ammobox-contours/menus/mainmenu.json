@@ -13,6 +13,18 @@
                         'callback' : 'FAC_update',
                         'value' : 'enabled',
                         'default_value' : true
-                }
+                },
+                {
+                        'type' : 'slider',
+                        'id' : 'FAC_updaterate',
+                        'title' : 'FAC_updaterate_title',
+                        'description' : 'FAC_updaterate_desc',
+                        'callback' : 'FAC_update',
+                        'value' : 'updaterate',
+                        'default_value' : 4,
+                        'max' : 12,
+                        'min' : 1,
+                        'step' : 1
+                },
         ]
 }

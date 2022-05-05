@@ -3,5 +3,8 @@
         'FAC_menu_main_desc' : 'Configure Fading Ammobox Contours.',
 
         'FAC_enabled_title' : 'Enable Fading of Ammobox Contours',
-        'FAC_enabled_desc' : 'When enabled, ammobox contours will fade out with distance\nbased on below parameters'
+        'FAC_enabled_desc' : 'When enabled, ammobox contours will fade out with distance based on below parameters.\nRequires heist restart.',
+
+        'FAC_updaterate_title' : 'Update Rate',
+        'FAC_updaterate_desc' : 'How many times per second you want contours to be updated.\nRequires heist restart.'
 }

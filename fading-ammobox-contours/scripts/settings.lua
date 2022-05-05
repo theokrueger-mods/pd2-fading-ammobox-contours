@@ -1,6 +1,6 @@
 -- default settings
 FAC.settings = {
-        ['FAC_somevalue'] = true
+        ['enabled'] = true
 }
 
 -- save and load function

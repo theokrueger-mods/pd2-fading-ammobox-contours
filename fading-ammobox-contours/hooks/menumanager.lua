@@ -1,3 +1,7 @@
+if not _G.FAC then
+        dofile(ModPath .. 'scripts/setup.lua')
+end
+
 -- add menu loc
 Hooks:Add(
         'LocalizationManagerPostInit',
@@ -20,14 +24,16 @@ Hooks:Add(
         'MenuManagerInitialize',
         'FAC_MenuManagerInitialize',
         function(menu)
-                -- save settings cblk
+                -- save setting cblk
                 MenuCallbackHandler.FAC_update = function(self, item)
+                        local name = item._parameters.name:sub(5)
+                        log('name: ' .. name .. '\nval: ' .. item:value())
                         if item._type == 'toggle' then
-                                FAC.settings[item._parameters.name] = item:value() == 'on'
+                                FAC.settings[name] = item:value() == 'on'
                         elseif item._type == 'slider' then
-                                FAC.settings[item._parameters.name] = math.floor(tonumber(item:value()) + 0.5)
+                                FAC.settings[name] = math.floor(tonumber(item:value()) + 0.5)
                         end
-                        FAC:savesettings()
+                        FAC:save_settings()
                 end
 
                 MenuHelper:LoadFromJsonFile(FAC.path .. 'menus/mainmenu.json', FAC, FAC.settings)

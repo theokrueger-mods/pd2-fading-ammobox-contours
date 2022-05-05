@@ -6,13 +6,13 @@
         'callback' : 'FAC_save',
         'items' : [
                 {
-                        "type" : "toggle",
-                        "id" : "cth_infiniteties",
-                        "title" : "cth_infiniteties_name",
-                        "description" : "cth_infiniteties_desc",
-                        "callback" : "cth_upd",
-                        "value" : "cth_infiniteties",
-                        "default_value" : true
-                },
+                        'type' : 'toggle',
+                        'id' : 'FAC_enabled',
+                        'title' : 'FAC_enabled_title',
+                        'description' : 'FAC_enabled_desc',
+                        'callback' : 'FAC_update',
+                        'value' : 'enabled',
+                        'default_value' : true
+                }
         ]
 }

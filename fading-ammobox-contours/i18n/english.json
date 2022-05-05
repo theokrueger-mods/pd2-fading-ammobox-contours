@@ -1,4 +1,7 @@
 {
         'FAC_menu_main_title' : 'Fading Ammobox Contours',
-        'FAC_menu_main_desc' : 'Configure Fading Ammobox Contours.'
+        'FAC_menu_main_desc' : 'Configure Fading Ammobox Contours.',
+
+        'FAC_enabled_title' : 'Enable Fading of Ammobox Contours',
+        'FAC_enabled_desc' : 'When enabled, ammobox contours will fade out with distance\nbased on below parameters'
 }

@@ -9,6 +9,3 @@ _G.FAC = {
 -- load settings
 dofile(FAC.path .. 'scripts/settings.lua')
 FAC:load_settings()
-
--- add mod options menu
-dofile(FAC.path .. 'scripts/menu.lua')

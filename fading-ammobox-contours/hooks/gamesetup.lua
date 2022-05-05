@@ -1,3 +1,12 @@
+if not _G.FAC then
+        dofile(ModPath .. 'scripts/setup.lua')
+end
+
+-- dont need to waste time if mod is off
+if not FAC.settings.enabled then
+        return
+end
+
 local mvec3_distance = mvector3.distance
 local framecount = 0
 -- update our contours every 5 frames because its unnoticeable compared to 1

@@ -13,18 +13,54 @@ local next_update = update_dt
 
 -- convert fadeouts from meters to centimeters
 local fadeout_start = FAC.settings.fadeout_start * 100
-local fadeout_end_d = math.abs(FAC.settings.fadeout_end * 100 - fadeout_start)
+local fadeout_end = FAC.settings.fadeout_end * 100
+local fadeout_end_d = math.abs(fadeout_end - fadeout_start)
 
-local function get_opacity_by_distance(distance)
+local start_colour = {
+        255,
+        255,
+        255
+}
+local end_colour = {
+        0,
+        0,
+        0
+}
+local end_colour_d = {
+        start_colour[1] - end_colour[1],
+        start_colour[2] - end_colour[2],
+        start_colour[3] - end_colour[3],
+}
+
+local function update_box_contour(boxcontour, distance)
+        if distance > fadeout_end then
+                boxcontour:_upd_opacity(0)
+                return
+        end
+
+        boxcontour:_upd_opacity(100)
+
+        local colour
         if distance < fadeout_start then
-                return 0.25
+                -- save calcs
+                colour = Color(
+                        255,
+                        start_colour[1],
+                        start_colour[2],
+                        start_colour[3]
+                ) / 255
+        else
+                -- (start - end) * factor = colour it should be
+                local factor = 1 - ((distance - fadeout_start) / fadeout_end_d)
+                colour = Color(
+                        255,
+                        end_colour[1] + math.floor(end_colour_d[1] * factor),
+                        end_colour[2] + math.floor(end_colour_d[2] * factor),
+                        end_colour[3] + math.floor(end_colour_d[3] * factor)
+                ) / 255
         end
 
-        if distance > fadeout_start + fadeout_end_d then
-                return 0
-        end
-
-        return math.floor(1 - ((distance - fadeout_start) / fadeout_end_d))
+        boxcontour:change_color('deployable_selected', colour)
 end
 
 -- update our contours every 5 frames because its unnoticeable compared to 1
@@ -53,10 +89,9 @@ Hooks:PostHook(
                                 local boxpos = box:position()
                                 local boxcontour = box:pickup()._unit:contour()
                                 if boxpos and boxcontour then
-                                        boxcontour:_upd_opacity(
-                                                get_opacity_by_distance(
-                                                        mvec3_distance(playerpos, boxpos) or 0
-                                                )
+                                        update_box_contour(
+                                                boxcontour,
+                                                mvec3_distance(playerpos, boxpos)
                                         )
                                 end
                         else

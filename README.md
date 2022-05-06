@@ -55,4 +55,4 @@ tbd
 
 ## license
 
-tbd
+MIT, see [LICENSE](./LICENSE)

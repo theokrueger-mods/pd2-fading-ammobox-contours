@@ -55,6 +55,13 @@ please submit localisations!
 
 ![thumbnail](./img/thumbnailsmall.png)
 
+![prev1](./img/prev1.png)
+
+![prev2](./img/prev2.png)
+
+![prev3](./img/prev3.png)
+
+
 ## license
 
 MIT, see [LICENSE](./LICENSE)

@@ -12,5 +12,23 @@
         'FAC_fadeout_start_desc' : 'Fadeout start point in meters.\nRequires heist restart.',
 
         'FAC_fadeout_end_title' : 'Fadeout End Point',
-        'FAC_fadeout_end_desc' : 'Fadeout end point in meters.\nRequires heist restart.'
+        'FAC_fadeout_end_desc' : 'Fadeout end point in meters.\nRequires heist restart.',
+
+        'FAC_start_colour_r_title' : 'Starting Colour (R)',
+        'FAC_start_colour_r_desc' : 'Set the red value for the starting contour colour.\nRequires heist restart.',
+
+        'FAC_start_colour_g_title' : 'Starting Colour (G)',
+        'FAC_start_colour_g_desc' : 'Set the green value for the starting contour colour.\nRequires heist restart.',
+
+        'FAC_start_colour_b_title' : 'Starting Colour (B)',
+        'FAC_start_colour_b_desc' : 'Set the blue value for the starting contour colour.\nRequires heist restart.',
+
+        'FAC_end_colour_r_title' : 'Ending Colour (R)',
+        'FAC_end_colour_r_desc' : 'Set the red value for the ending contour colour.\nRequires heist restart.',
+
+        'FAC_end_colour_g_title' : 'Ending Colour (G)',
+        'FAC_end_colour_g_desc' : 'Set the green value for the ending contour colour.\nRequires heist restart.',
+
+        'FAC_end_colour_b_title' : 'Ending Colour (B)',
+        'FAC_end_colour_b_desc' : 'Set the blue value for the ending contour colour.\nRequires heist restart.'
 }

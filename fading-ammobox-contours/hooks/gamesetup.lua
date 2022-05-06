@@ -17,14 +17,14 @@ local fadeout_end = FAC.settings.fadeout_end * 100
 local fadeout_end_d = math.abs(fadeout_end - fadeout_start)
 
 local start_colour = {
-        255,
-        255,
-        255
+        FAC.settings.start_colour_r,
+        FAC.settings.start_colour_g,
+        FAC.settings.start_colour_b
 }
 local end_colour = {
-        0,
-        0,
-        0
+        FAC.settings.end_colour_r,
+        FAC.settings.end_colour_g,
+        FAC.settings.end_colour_b
 }
 local end_colour_d = {
         start_colour[1] - end_colour[1],

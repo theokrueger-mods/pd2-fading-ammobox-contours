@@ -53,6 +53,86 @@
                         'max' : 100.00,
                         'min' : 0,
                         'step' : 0.05
+                },
+                {
+                        'type' : 'divider',
+                        'size' : 40
+                },
+                {
+                        'type' : 'slider',
+                        'id' : 'FAC_start_colour_r',
+                        'title' : 'FAC_start_colour_r_title',
+                        'description' : 'FAC_start_colour_r_desc',
+                        'callback' : 'FAC_update',
+                        'value' : 'start_colour_r',
+                        'default_value' : 255,
+                        'max' : 255,
+                        'min' : 0,
+                        'step' : 1
+                },
+                {
+                        'type' : 'slider',
+                        'id' : 'FAC_start_colour_g',
+                        'title' : 'FAC_start_colour_g_title',
+                        'description' : 'FAC_start_colour_g_desc',
+                        'callback' : 'FAC_update',
+                        'value' : 'start_colour_g',
+                        'default_value' : 255,
+                        'max' : 255,
+                        'min' : 0,
+                        'step' : 1
+                },
+                {
+                        'type' : 'slider',
+                        'id' : 'FAC_start_colour_b',
+                        'title' : 'FAC_start_colour_b_title',
+                        'description' : 'FAC_start_colour_b_desc',
+                        'callback' : 'FAC_update',
+                        'value' : 'start_colour_b',
+                        'default_value' : 255,
+                        'max' : 255,
+                        'min' : 0,
+                        'step' : 1
+                },
+                {
+                        'type' : 'divider',
+                        'size' : 20
+                },
+                {
+                        'type' : 'slider',
+                        'id' : 'FAC_end_colour_r',
+                        'title' : 'FAC_end_colour_r_title',
+                        'description' : 'FAC_end_colour_r_desc',
+                        'callback' : 'FAC_update',
+                        'value' : 'end_colour_r',
+                        'default_value' : 0,
+                        'max' : 255,
+                        'min' : 0,
+                        'step' : 1
+                },
+                {
+                        'type' : 'slider',
+                        'id' : 'FAC_end_colour_g',
+                        'title' : 'FAC_end_colour_g_title',
+                        'description' : 'FAC_end_colour_g_desc',
+                        'callback' : 'FAC_update',
+                        'value' : 'end_colour_g',
+                        'default_value' : 0,
+                        'max' : 255,
+                        'min' : 0,
+                        'step' : 1
+                },
+                {
+                        'type' : 'slider',
+                        'id' : 'FAC_end_colour_b',
+                        'title' : 'FAC_end_colour_b_title',
+                        'description' : 'FAC_end_colour_b_desc',
+                        'callback' : 'FAC_update',
+                        'value' : 'end_colour_b',
+                        'default_value' : 0,
+                        'max' : 255,
+                        'min' : 0,
+                        'step' : 1
                 }
         ]
 }

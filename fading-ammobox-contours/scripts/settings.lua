@@ -2,13 +2,26 @@
 FAC.settings = {
         -- settings which are rounded to integer
         int = {
-                ['updaterate'] = true
+                ['updaterate'] = true,
+                ['start_colour_r'] = true,
+                ['start_colour_g'] = true,
+                ['start_colour_b'] = true,
+                ['end_colour_r'] = true,
+                ['end_colour_g'] = true,
+                ['end_colour_b'] = true
         },
         -- user changeable
         ['enabled'] = true,
         ['updaterate'] = 4,
         ['fadeout_start'] = 15.00,
-        ['fadeout_end'] = 20.00
+        ['fadeout_end'] = 20.00,
+        -- colours
+        ['start_colour_r'] = 255,
+        ['start_colour_g'] = 255,
+        ['start_colour_b'] = 255,
+        ['end_colour_r'] = 0,
+        ['end_colour_g'] = 0,
+        ['end_colour_b'] = 0
 }
 
 -- save and load function

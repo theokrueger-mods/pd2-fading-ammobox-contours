@@ -2,6 +2,8 @@
 
 this mod makes ammoboxes have contours that fade out with distance.
 
+also adds an abundance of settings to change where when and how the boxes will fade.
+
 ----
 
 <details>
@@ -51,7 +53,7 @@ please submit localisations!
 
 ## previews
 
-tbd
+![thumbnail](./img/thumbnailsmall.png)
 
 ## license
 

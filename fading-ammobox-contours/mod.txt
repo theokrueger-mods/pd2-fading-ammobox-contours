@@ -22,7 +22,7 @@
                 {
                         'identifier' : 'FAC',
                         'host' : {
-                                'meta' : 'tbd'
+                                'meta' : 'https://gitlab.com/theokrueger-mods/pd2-fading-ammobox-contours/-/raw/master/meta.json'
                         }
                 }
         ]

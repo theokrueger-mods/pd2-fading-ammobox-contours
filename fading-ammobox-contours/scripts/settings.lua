@@ -12,6 +12,8 @@ FAC.settings = {
         },
         -- user changeable
         ['enabled'] = true,
+        ['apply_box_outlines'] = true,
+        ['apply_throwable_outlines'] = true,
         ['updaterate'] = 4,
         ['fadeout_start'] = 15.00,
         ['fadeout_end'] = 20.00,

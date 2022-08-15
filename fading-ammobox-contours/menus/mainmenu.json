@@ -15,6 +15,24 @@
                         'default_value' : true
                 },
                 {
+                        'type' : 'toggle',
+                        'id' : 'FAC_apply_box_outlines',
+                        'title' : 'FAC_apply_box_outlines_title',
+                        'description' : 'FAC_apply_box_outlines_desc',
+                        'callback' : 'FAC_update',
+                        'value' : 'apply_box_outlines',
+                        'default_value' : true
+                },
+                {
+                        'type' : 'toggle',
+                        'id' : 'FAC_apply_throwable_outlines',
+                        'title' : 'FAC_apply_throwable_outlines_title',
+                        'description' : 'FAC_apply_throwable_outlines_desc',
+                        'callback' : 'FAC_update',
+                        'value' : 'apply_throwable_outlines',
+                        'default_value' : true
+                },
+                {
                         'type' : 'slider',
                         'id' : 'FAC_updaterate',
                         'title' : 'FAC_updaterate_title',

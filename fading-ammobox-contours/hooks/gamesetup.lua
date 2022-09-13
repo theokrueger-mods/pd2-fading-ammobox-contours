@@ -67,7 +67,7 @@ end
 Hooks:PostHook(
         GameSetup,
         'update',
-        'FAC_update',
+        'FAC_GS_update',
         function(self, t, dt)
                 -- only update the contours at designated dt
                 if t > next_update then

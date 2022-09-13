@@ -1,8 +1,8 @@
 [
         {
                 'ident' : 'FAC',
-                'hash' : '9fe64b99bd4a08f8e03236b424762f055433f23eaa778a84b8ab6d4f17bea786',
+                'hash' : 'c9b8416f029f834a7c39c191de6180d9822f0e91e079809efaee9e6f64c34ba3',
                 'patchnotes_url' : 'https://gitlab.com/theokrueger-mods/pd2-fading-ammobox-contours/-/releases',
-                'download_url' : 'https://gitlab.com/theokrueger-mods/pd2-fading-ammobox-contours/uploads/6dc10915b8d8770eaa7890ecd2bf00e0/fading-ammobox-contours.zip'
+                'download_url' : 'https://gitlab.com/theokrueger-mods/pd2-fading-ammobox-contours/uploads/98e480cecaafee67cac1c948c7abbf46/fading-ammobox-contours.zip'
         }
 ]
